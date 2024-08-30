@@ -2,7 +2,7 @@ Apartments = {}
 Apartments.Starting = false
 Apartments.SpawnOffset = 30
 Apartments.Locations = {
-    ["apartment1"] = {
+    --[[ ["apartment1"] = {
         name = "apartment1",
         label = "South Rockford Drive",
         coords = {
@@ -86,5 +86,5 @@ Apartments.Locations = {
             distance = 2.0,
             created = false
         }
-    },
+    }, ]]
 }
