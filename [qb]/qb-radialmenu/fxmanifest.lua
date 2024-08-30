@@ -1,34 +1,29 @@
-fx_version 'cerulean'
-game 'gta5'
-lua54 'yes'
-author 'Kakarot'
-description 'Allows players quick access to a menu for various actions'
-version '1.2.0'
+fx_version 'adamant'
+Developer 'Elixir'
+Version '1.0.0'
 
-ui_page 'html/index.html'
+games { 'gta5' }
 
-shared_scripts {
-    'config.lua',
-    '@qb-core/shared/locale.lua',
-    'locales/en.lua',
-    'locales/*.lua'
+client_script {
+  "config.lua",
+  "client_menu.lua",
+	"utils.lua"
 }
 
-client_scripts {
-    'client/main.lua',
-    'client/clothing.lua',
-    'client/trunk.lua',
-    'client/stretcher.lua'
-}
-
-server_scripts {
-    'server/trunk.lua',
-    'server/stretcher.lua'
-}
+ui_page "nui/dist/index.html"
 
 files {
-    'html/index.html',
-    'html/css/main.css',
-    'html/js/main.js',
-    'html/js/RadialMenu.js',
+  "nui/dist/*",
+  "nui/dist/index.html",
+	"nui/dist/assets/*",
+}
+
+lua54 'yes'
+escrow_ignore {
+  "config.lua",
+  "client_menu.lua",
+	"utils.lua",
+  "nui/dist/*",
+  "nui/dist/index.html",
+	"nui/dist/assets/*",
 }
