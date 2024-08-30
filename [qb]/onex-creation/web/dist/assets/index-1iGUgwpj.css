@@ -1,0 +1,748 @@
+:root {
+    --color: #ff0039;
+    --color2: #ff0039d9;
+    --color3: rgb(80 79 84);
+    --color4: rgb(78, 86, 96);
+    --color5: rgba(255, 0, 57, .41);
+    --donebtn: #ff0039
+}
+
+@font-face {
+    font-family: a_RubricaXtCn;
+    src: url(./rxtcn-7lSmlgCo.ttf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Bebas Neue;
+    src: url(./BebasNeue-Regular-9gjjU8Dt.ttf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(./Oswald-VariableFont_wght-c6VxPAr2.ttf);
+    font-weight: 200;
+    font-style: normal
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeQuality
+}
+
+.CharCreationBg {
+    position: absolute;
+    width: 100vw;
+    height: 56.4vw
+}
+
+.decorLine-1 {
+    position: absolute;
+    width: .26vw;
+    height: 8.49vw;
+    left: 1.042vw;
+    top: 1.667vw;
+    background: #ff0039
+}
+
+.subHeader {
+    position: absolute;
+    width: 28.229vw;
+    height: 2.917vw;
+    left: 1.927vw;
+    top: 1.927vw;
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.135vw;
+    line-height: 1.823vw;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    color: #ffffff94;
+    text-shadow: 0vw 0vw .208vw rgba(0, 0, 0, .25)
+}
+
+.SelectedCatagoryNamet {
+    position: absolute;
+    width: 28.906vw;
+    height: 5.99vw;
+    left: 1.719vw;
+    top: 4.167vw;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.979vw;
+    line-height: 5.99vw;
+    letter-spacing: -.015em;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.EditCatag {
+    display: inline;
+    position: absolute;
+    left: 91.823vw;
+    top: 13.906vw;
+    cursor: pointer
+}
+
+.EditFamily {
+    box-sizing: border-box;
+    position: relative;
+    width: 6.354vw;
+    height: 6.302vw;
+    margin-bottom: .4vw
+}
+
+.EditFace {
+    box-sizing: border-box;
+    position: relative;
+    width: 6.354vw;
+    height: 6.354vw;
+    margin-bottom: -.2vw
+}
+
+.EditClothes {
+    box-sizing: border-box;
+    position: relative;
+    width: 6.354vw;
+    height: 6.302vw;
+    margin-bottom: .26vw
+}
+
+.EditHair {
+    box-sizing: border-box;
+    position: relative;
+    width: 6.354vw;
+    height: 6.354vw;
+    margin-bottom: -.2vw
+}
+
+.EditMakeup {
+    box-sizing: border-box;
+    position: relative;
+    width: 6.354vw;
+    height: 6.354vw
+}
+
+.EditFamily:hover,
+.EditFace:hover,
+.EditClothes:hover,
+.EditHair:hover,
+.EditMakeup:hover {
+    opacity: .6
+}
+
+.catagSvgs {
+    display: none
+}
+
+.catag-svg-icon-fix-makeup {
+    transform: translate(24px, 25.997px)
+}
+
+.catag-svg-icon-fix-face {
+    transform: translate(32.006px, 18.01px)
+}
+
+.catag-svg-icon-fix-tattoos {
+    transform: translate(10.886px, 38.4px)
+}
+
+.Decor-line-2 {
+    position: absolute;
+    width: .104vw;
+    height: 36.823vw;
+    left: -2vw;
+    top: -2.8vw;
+    background: linear-gradient(180deg, #d9d9d900, #d9d9d985 48.96%, #d9d9d900)
+}
+
+.CameraPosition {
+    position: absolute;
+    width: 13.854vw;
+    height: 24.063vw;
+    right: 11vw;
+    bottom: 8vw
+}
+
+#f-bone {
+    position: absolute;
+    left: -11.5vw;
+    bottom: 1.2vw
+}
+
+.clothesofonHeader {
+    position: absolute;
+    width: 10.469vw;
+    height: 2.135vw;
+    left: 75.677vw;
+    top: 40.365vw;
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.771vw;
+    line-height: 2.135vw;
+    letter-spacing: -.03em;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.clothesonoff-decor-line {
+    position: absolute;
+    width: 14.063vw;
+    height: .052vw;
+    left: 75.625vw;
+    top: 42.5vw;
+    background: #fff
+}
+
+.ClothesOfOncONT {
+    position: absolute;
+    left: -1vw;
+    top: -.5vw
+}
+
+.clothesofn-btn {
+    display: inline-flex;
+    box-sizing: border-box;
+    position: relative;
+    width: 3.273vw;
+    height: 3.273vw;
+    left: 75.573vw;
+    top: 43.229vw;
+    background: #4e5660;
+    border: .086vw solid white;
+    box-shadow: inset 0 0 1.06vw #000;
+    border-radius: .39vw;
+    margin-left: .2vw;
+    cursor: pointer
+}
+
+.clothesofn-btn:hover {
+    opacity: .6
+}
+
+.InteractionButtons {
+    cursor: pointer
+}
+
+.rando-btn {
+    visibility: hidden;
+    position: absolute;
+    width: 7.474vw;
+    height: 4.167vw;
+    left: 74.74vw;
+    top: 51.146vw
+}
+
+.discard-btn {
+    position: absolute;
+    width: 7.474vw;
+    height: 4.167vw;
+    left: 82.135vw;
+    top: 51.146vw
+}
+
+#discard-btn_Text01 {
+    position: absolute;
+    width: 12.4vw;
+    height: 4.8vw;
+    left: 83.4%;
+    top: 93.6%;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8vw;
+    line-height: 86%;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    color: #fff;
+    pointer-events: none
+}
+
+.done-btn {
+    position: absolute;
+    left: 88.802vw;
+    top: 47.646vw
+}
+
+.rando-btn:hover,
+.done-btn:hover {
+    opacity: .6
+}
+
+#CharRotateElement {
+    position: absolute;
+    left: 25.552vw;
+    top: .125vw;
+    width: 46.198vw;
+    height: 56.313vw;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: e-resize
+}
+
+#CreationItemContainner {
+    overflow: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    height: 44vw;
+    width: 23vw;
+    top: 11vw;
+    left: .1vw;
+    scroll-behavior: smooth;
+    margin-bottom: -30vw
+}
+
+.Item-parent {
+    display: inline-block;
+    top: -2vw;
+    position: relative;
+    width: 23vw;
+    height: auto;
+    padding-bottom: 2vw;
+    transition: .5s
+}
+
+.Item-header {
+    position: relative;
+    width: 22vw;
+    height: 2.5vw;
+    left: 1.1vw;
+    top: .5vw;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.917vw;
+    line-height: 86%;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.item-control-head {
+    position: relative;
+    width: auto;
+    height: 1.354vw;
+    left: 1.042vw;
+    top: 1.479vw;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.563vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #ffffff78
+}
+
+.texture-control-head {
+    position: relative;
+    width: auto;
+    height: 1.354vw;
+    left: 12.135vw;
+    top: .2vw;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.563vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #ffffff78
+}
+
+.texture-control-head-mixer1 {
+    position: relative;
+    height: 1.354vw;
+    left: 1.042vw;
+    top: 1.479vw;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.563vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #ffffff78
+}
+
+.texture-control-mixer2 {
+    position: relative;
+    width: 4.375vw;
+    height: 1.354vw;
+    left: 17.2vw;
+    top: .2vw;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.563vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #ffffff78
+}
+
+.item-box-m-o {
+    box-sizing: border-box;
+    position: absolute;
+    width: 9.479vw;
+    height: 3.177vw;
+    left: 1vw;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeQuality
+}
+
+.item-box {
+    box-sizing: border-box;
+    position: absolute;
+    width: 9.479vw;
+    height: 3.177vw;
+    left: 1vw;
+    top: 6.5vw;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeQuality
+}
+
+.item-texture {
+    box-sizing: border-box;
+    position: relative;
+    width: 9.479vw;
+    height: 3.177vw;
+    left: 8.65vw;
+    top: 1.3vw
+}
+
+.item-box-prev {
+    box-sizing: border-box;
+    position: relative;
+    width: 9.479vw;
+    height: 3.177vw;
+    left: 1vw;
+    top: 1.3vw;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeQuality
+}
+
+.item-texture-prev {
+    box-sizing: border-box;
+    position: relative;
+    width: 9.479vw;
+    height: 3.177vw;
+    left: -1vw;
+    top: 1.3vw
+}
+
+.wrapPrev_item_box {
+    margin-top: -14%
+}
+
+.item-texture-m-o {
+    box-sizing: border-box;
+    position: relative;
+    width: 9.479vw;
+    height: 3.177vw;
+    left: 3.6vw;
+    top: 1.3vw
+}
+
+.item-input-1 {
+    position: relative;
+    width: 3.042vw;
+    height: 1.146vw;
+    left: 3.91vw;
+    top: .15vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.302vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center
+}
+
+.item-input-2 {
+    position: relative;
+    width: 3.042vw;
+    height: 1.146vw;
+    left: 1.9100000000000001vw;
+    top: .15vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.302vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center
+}
+
+.item-input-1-prev {
+    position: relative;
+    width: 3.042vw;
+    height: 1.146vw;
+    left: -5.9vw;
+    top: .15vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.302vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center
+}
+
+.item-input-2-prev {
+    position: relative;
+    width: 3.042vw;
+    height: 1.146vw;
+    left: 14.91vw;
+    top: -1.15vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.302vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center
+}
+
+.texture-input-1 {
+    position: relative;
+    width: 3.042vw;
+    height: 1.146vw;
+    left: 2vw;
+    top: .1vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.302vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center
+}
+
+.texture-input-m-o {
+    position: relative;
+    width: 3.042vw;
+    height: 1.146vw;
+    left: 2vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.302vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center
+}
+
+.texture-input-mop {
+    position: relative;
+    width: 3.042vw;
+    height: 1.146vw;
+    top: .1vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.302vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center
+}
+
+.color-control-head {
+    position: relative;
+    width: 2.5vw;
+    height: 1.354vw;
+    left: 1.1vw;
+    top: 2vw;
+    font-family: a_RubricaXtCn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.563vw;
+    line-height: 86%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #ffffff78
+}
+
+.color-dropMenu {
+    cursor: pointer;
+    position: relative;
+    top: 2.5vw;
+    left: 1.1vw
+}
+
+.color-dropMenu-colors {
+    display: none;
+    box-sizing: border-box;
+    position: relative;
+    top: 1.5vw;
+    left: 1.1vw;
+    width: 20.26vw;
+    background: #4e5660;
+    border: .156vw solid #FFFFFF;
+    box-shadow: inset 0 0 4.219vw #000
+}
+
+.variant-colorCont {
+    cursor: pointer;
+    position: relative;
+    width: 20vw;
+    top: .5vw;
+    left: .1vw;
+    transform: scale(.96);
+    margin-bottom: 1vw
+}
+
+.arrow-global-event {
+    cursor: pointer
+}
+
+.arrow-mouse-g {
+    pointer-events: none;
+    opacity: .3
+}
+
+.wrap-mopacity {
+    position: relative;
+    margin-bottom: -2.3vw
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    pointer-events: none
+}
+
+::-webkit-scrollbar {
+    width: .256vw;
+    direction: ltr
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff14
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff6a
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #F0F0F0
+}
+
+.color-dropMenu-model-indx-model {
+    display: inline-flex;
+    flex-wrap: wrap
+}
+
+.item-prevMenuExp {
+    cursor: pointer;
+    position: relative;
+    top: 1.5vw;
+    left: .65vw;
+    margin-bottom: 4vw
+}
+
+#GreenContainer {
+    margin: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #281142f5;
+    width: 20%;
+    height: 5%;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0)
+}
+
+#GreenContainer p {
+    color: #fff;
+    font-size: 2em;
+    margin: 2.5%;
+    font-family: Bebas Neue
+}
+
+.image-container {
+    background-size: cover;
+    position: relative;
+    left: 37%;
+    top: 4%;
+    height: 6.5vw
+}
+
+.error-image {
+    background-size: cover;
+    position: relative;
+    left: 12%;
+    top: 5%;
+    height: 6.5vw;
+    transform: scale(.7)
+}
+
+.preview_item_Fixer {
+    margin-top: -.8vw;
+    margin-left: .4vw
+}
+
+.prev_item_list_cont {
+    left: -4%
+}
