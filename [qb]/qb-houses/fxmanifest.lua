@@ -38,6 +38,6 @@ files {
 dependencies {
     'qb-core',
     'qb-interior',
-    'qb-clothing',
+ --   'qb-clothing',
     'qb-weathersync'
 }
