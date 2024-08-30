@@ -1,0 +1,19 @@
+{
+    "left_top_emote_categ_name_cont" : "#FF0039" ,
+    "emote_count_text" : "#FF0039",
+
+    "search_input_border" : "rgb(255, 0, 57)",
+
+    "top_action_bar_hover_color" : "#ff0039",
+    "top_action_bar_upperBody_hover_color" : "#7000FE",
+
+    "emote_category_hover" : "#ff0039",
+
+    "emotes_hover" : "rgba(255, 0, 57, 0.71)",
+    "exit_text_color" : "#FF0039",
+    "exit_text_shadow" : "rgba(255, 0, 57, 0.54)",
+
+    "quick_emote_bg" : "#ff0039",
+    "quick_emote_border" : "#ff0039"
+
+}
