@@ -51,7 +51,7 @@ Framework.Core = {
 
         ]]
 
-    name = 'standalone', --[[ 
+    name = 'qb', --[[ 
 
     * qb 
     * esx 
