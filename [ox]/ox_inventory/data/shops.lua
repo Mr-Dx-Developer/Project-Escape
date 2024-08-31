@@ -1,5 +1,5 @@
 return {
-	General = {
+--[[ 	General = {
 		name = 'Shop',
 		blip = {
 			id = 59, colour = 69, scale = 0.8
@@ -63,8 +63,7 @@ return {
 		blip = {
 			id = 402, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'lockpick', price = 10 },
-			{ name = 'phone', price = 10 }
+			{ name = 'lockpick', price = 10 }
 		}, locations = {
 			vec3(2748.0, 3473.0, 55.67),
 			vec3(342.99, -1298.26, 32.51)
@@ -103,29 +102,94 @@ return {
 			{ loc = vec3(-1117.61, 2700.26, 18.67), length = 0.6, width = 0.5, heading = 221.82, minZ = 18.5, maxZ = 18.9, distance = 2.0 },
 			{ loc = vec3(841.05, -1034.76, 28.31), length = 0.6, width = 0.5, heading = 360.0, minZ = 28.2, maxZ = 28.6, distance = 2.0 }
 		}
-	},
+	}, ]]
 
 	PoliceArmoury = {
 		name = 'Police Armoury',
 		groups = shared.police,
-		blip = {
+		--[[ blip = {
 			id = 110, colour = 84, scale = 0.8
-		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
+		}, ]] 
+		inventory = {			
+			{ name = 'weapon_stungun', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 0 },
+			{ name = 'weapon_glock17', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 1 },
+			{ name = 'weapon_smg', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 2  },
+			{ name = 'smg_flashlight', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 2  },
+			{ name = 'smg_extendedclip', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 2  },
+			{ name = 'weapon_pumpshotgun_mk2', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3  },
+			{ name = 'weapon_m4', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 4  },
+			{ name = 'weapon_ar15', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 5  },
+			{ name = 'weapon_scarh', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 6  },
+			{ name = 'WEAPON_HK416', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 7  },
+			{ name = 'rifle_extendedclip', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 7  },
+			{ name = 'WEAPON_MK14', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 8  },
+			{ name = 'WEAPON_M110', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 9  },
+			{ name = 'WEAPON_HEAVYPISTOL', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 5  },
+			{ name = 'pistol_extendedclip', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 5  },
+			{ name = 'ammo-45', price = 0, grade = 5  },
+			{ name = 'pistol_extendedclip', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 8  },
+			{ name = 'weapon_colbaton', price = 0, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 0  },
+			{ name = 'pistol_ammo', price = 0, grade = 0  },
+			{ name = 'smg_ammo', price = 0, grade = 2  },
+			{ name = 'shotgun_ammo', price = 0, grade = 3  },
+			{ name = 'rifle_ammo', price = 0, grade = 4  },
+			{ name = 'polhandcuffs', price = 0, metadata = { registered = true, serial = 'POL' }, grade = 0  },
+			{ name = 'weapon_flashlight', price = 0, metadata = { registered = true, serial = 'POL' }, grade = 0  },
+			{ name = 'police_stormram', price = 0, metadata = { registered = true, serial = 'POL' }, grade = 0  },
+			{ name = 'heavyarmor', price = 0, metadata = { registered = true, serial = 'POL' }, grade = 0  },
+			{ name = 'advancedrepairkit', price = 0, grade = 0  },
+			{ name = 'radio', price = 0, grade = 0  },
+
+			{ name = 'bandage', price = 30, grade = 0  },
+			{ name = 'ifaks', price = 20, grade = 0  },
+
+			{ name = 'megaphone', price = 0, grade = 0  },
+			{ name = 'spikestrip', price = 0, metadata = { registered = true, serial = 'POL' }, grade = 0  },
+			{ name = 'policegunrack', price = 0, metadata = { registered = true, serial = 'POL' }, grade = 0  },
+			{ name = 'sniper_ammo', price = 0, grade = 9  },
+			{ name = 'uvlight', price = 0, grade = 4  },
+			{ name = 'keepcompanionpdk9', price = 0, grade = 4  },
+			{ name = "firstaidforpet", price = 0, grade = 4 },
+			{ name = "petfood", price = 0, grade = 4 },
+			{ name = "petwaterbottleportable", price = 0, grade = 4 },
+			{ name = "water_bottle", price = 0, grade = 4 },
+			{ name = "policecard", price = 0, grade = 1 },
 		}, locations = {
-			vec3(451.51, -979.44, 30.68)
+			vector3(-549.0, -108.99, 37.87)
 		}, targets = {
-			{ loc = vec3(453.21, -980.03, 30.68), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.5, maxZ = 32.0, distance = 6 }
+			{ loc = vector3(-549.0, -108.99, 37.87), length = 2.0, width = 6.0, heading = 20.0, minZ = 36.87, maxZ = 40.87, distance = 5 }
 		}
 	},
 
-	Medicine = {
+	--[[ EMSArmory = {
+		name = 'EMS Armory',
+		groups = {
+			['ambulance'] = 0
+		}, ]]
+		--[[ blip = {
+			id = 110, colour = 84, scale = 0.8
+		}, ]] 
+		--[[ inventory = {
+			{ name = 'radio', price = 0, grade = 0  },
+			{ name = 'bandage', price = 0, grade = 0  },
+			{ name = 'painkillers', price = 0, grade = 0  },
+			{ name = 'firstaid', price = 0, grade = 0  },
+			{ name = 'weapon_flashlight', price = 0, grade = 0  },
+			{ name = 'weapon_fireextinguisher', price = 0, grade = 0  },
+			{ name = 'polhandcuffs', price = 0, grade = 0  },
+			{ name = 'heavyarmor', price = 0, grade = 0  },
+			{ name = 'ems_idcard', price = 0, grade = 0  },
+
+		}, locations = {
+			vector3(-454.16, -307.77, 34.91),
+			vector3(-245.13, 6315.71, 32.82)
+		}, targets = {
+			{ loc = vector3(-454.16, -307.77, 34.91), length = 2.8, width = 1, heading = 20.0, minZ = 33.91, maxZ = 37.91, distance = 3 },
+			{ loc = vector3(-245.13, 6315.71, 32.82), length = 2.8, width = 1, heading = 230.0, minZ = 29.82, maxZ = 33.82, distance = 3 }
+		}
+	}, ]]
+
+	--[[ Medicine = {
 		name = 'Medicine Cabinet',
 		groups = {
 			['ambulance'] = 0
@@ -166,5 +230,5 @@ return {
 		model = {
 			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
 		}
-	}
+	} ]]
 }

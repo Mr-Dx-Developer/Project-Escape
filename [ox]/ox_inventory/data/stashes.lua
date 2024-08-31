@@ -21,7 +21,7 @@ return {
 	{
 		coords = vec3(301.3, -600.23, 43.28),
 		target = {
-			loc = vec3(301.82, -600.99, 43.29),
+			loc = vec3(298.59, -598.03, 43.28),
 			length = 0.6,
 			width = 1.8,
 			heading = 340,
