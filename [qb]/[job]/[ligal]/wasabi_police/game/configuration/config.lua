@@ -286,7 +286,7 @@ Config.Locations = {
     LSPD = {
         blip = {
             enabled = true,
-            coords = vec3(464.57, -992.0, 30.69),
+            coords = vec3(-562.61, -125.0, 38.44),
             sprite = 60,
             color = 29,
             scale = 1.0,
@@ -296,24 +296,24 @@ Config.Locations = {
         clockInAndOut = {
             enabled = true,                        -- Enable clocking in and out at a set location? (If using ESX you must have a off duty job for each e.x. offpolice for police offsheriff for sheriff AND have grades for each pd grade - QBCORE REQUIRES NOTHING)
             jobLock = 'police',                    -- This must be set to which job will be utilizing (ESX MUST HAVE OFF DUTY JOB / GRADES FOR THIS - ex. offpolice or offsheriff)
-            coords = vec3(464.87, -977.37, 30.69), -- Location of where to go on and off duty(If not using target)
+            coords = vec3(-565.45, -126.35, 38.44), -- Location of where to go on and off duty(If not using target)
             label = '[E] - Go On/Off Duty',        -- Text to display(If not using target)
             distance = 3.0,                        -- Distance to display text UI(If not using target)
             target = {
-                enabled = false,                   -- If enabled, the location and distance above will be obsolete
+                enabled = true,                   -- If enabled, the location and distance above will be obsolete
                 label = 'Go On/Off Duty',
-                coords = vec3(464.87, -977.37, 30.69),
-                heading = 91.06,
+                coords = vec3(-565.45, -126.35, 38.44),
+                heading = 305.00,
                 distance = 2.5,
                 width = 2.0,
-                length = 1.0,
-                minZ = 30.69 - 0.9,
-                maxZ = 30.69 + 0.9
+                length = 2.0,
+                minZ = 37.44 - 0.9,
+                maxZ = 41.44 + 0.9
             }
         },
 
         bossMenu = {
-            enabled = true,                        -- Enable boss menu?
+            enabled = false,                        -- Enable boss menu?
             jobLock = 'police',                    -- Lock to specific police job? Set to false if not desired
             coords = vec3(460.64, -985.64, 30.73), -- Location of boss menu (If not using target)
             label = '[E] - Access Boss Menu',      -- Text UI label string (If not using target)
@@ -332,7 +332,7 @@ Config.Locations = {
         },
 
         armoury = {
-            enabled = true,                                                                              -- Set to false if you don't want to use
+            enabled = false,                                                                              -- Set to false if you don't want to use
             coords = vec3(480.32, -996.67, 30.69 - 0.9),                                                 -- Coords of armoury
             heading = 86.95,                                                                             -- Heading of armoury NPC
             ped = 's_f_y_cop_01',                                                                        -- Ped model or false for no ped
@@ -498,21 +498,21 @@ Config.Locations = {
         -- Personal Locker. Supports inventories: ox_inventory, qb-inventory, and qs-inventory
         --        Custom inventories can easily be added in wasabi_bridge/inventories/
         personalLocker = {
-            enabled = false,                       -- Enable personal locker for this station?
+            enabled = true,                       -- Enable personal locker for this station?
             jobLock = 'police',                    -- Job lock?
-            coords = vec3(462.64, -995.88, 30.69), -- Area to prompt personal locker
+            coords = vec3(-548.92, -116.06, 37.87), -- Area to prompt personal locker
             range = 2.0,                           -- Range it will prompt from coords above
             label = '[E] - Access Personal Locker',
             target = {
-                enabled = false, -- If enabled, the location above will be obsolete
+                enabled = true, -- If enabled, the location above will be obsolete
                 label = 'Access Personal Locker',
-                coords = vec3(462.64, -995.88, 30.69),
-                heading = 354.94,
+                coords = vec3(-548.92, -116.06, 37.87),
+                heading = 295.00,
                 distance = 2.5,
-                width = 2.0,
-                length = 1.0,
-                minZ = 30.69 - 0.9,
-                maxZ = 30.69 + 0.9
+                width = 1.0,
+                length = 2.0,
+                minZ = 36.87 - 0.9,
+                maxZ = 40.87 + 0.9
             }
         },
 
