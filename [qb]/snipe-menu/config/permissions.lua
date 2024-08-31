@@ -29,9 +29,11 @@ Config.GodRoles = {
 Config.Permissions = {
     
     ["discord:1025956543017001002"] = "god", -- lemonz2
-  --  ["discord:464336271494610946"] = "god", -- RBN
     ["discord:811436286006657025"] = "god", -- Mr_Dx
 
+    ["discord:1036247521074360331"] = "god", -- Klutch
+    ["discord:315117946181779456"] = "god", -- Emissa
+    
 
 
     ["license:6d3b6254a50416697dcaa91878e2eb03d9112302"] = "god", -- the role god, admin or mod should be the key from Config.GodRoles which means the values that are added in square brackets.
