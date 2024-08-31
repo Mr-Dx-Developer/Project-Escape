@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Bob_74'
 description 'Load and customize your map'
-version '2.3.2'
+version '2.3.0'
 
 lua54 "yes"
 
@@ -11,7 +11,6 @@ client_scripts {
     "lib/common.lua"
     , "lib/observers/interiorIdObserver.lua"
     , "lib/observers/officeSafeDoorHandler.lua"
-    , "lib/observers/officeCullHandler.lua"
     , "client.lua"
 
     -- GTA V
@@ -105,11 +104,6 @@ client_scripts {
     -- DLC Diamond Casino (Requires forced build 2060 or higher)
     , "dlc_casino/casino.lua"
     , "dlc_casino/penthouse.lua"
-
-    -- DLC Cayo Perico Heist (Requires forced build 2189 or higher)
-    , "dlc_cayoperico/base.lua"
-    , "dlc_cayoperico/nightclub.lua"
-    , "dlc_cayoperico/submarine.lua"
 
     -- DLC Tuners (Requires forced build 2372 or higher)
     , "dlc_tuner/garage.lua"

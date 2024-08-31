@@ -30,14 +30,6 @@ This resource has been completely rewritten from scratch since v2.0. You can cus
 (DD/MM/YYYY)
 
 ---
-24/08/2024 - 2.3.2
-- Added Kosatka and "The Music Locker" interiors.
-- Removed `Citizen` prefix from code.
-
-10/08/2024 - 2.3.1
-- Fix world not rendering when inside security offices
-- Fix typos in "Los Santos Tuners" files
-
 02/07/2024 - 2.3.0
 - Added "Bottom Dollar Bounties" support
 

@@ -1,4 +1,4 @@
-CreateThread(function()
+Citizen.CreateThread(function()
     -- ====================================================================
     -- =--------------------- [GTA V: Single player] ---------------------=
     -- ====================================================================
@@ -146,14 +146,6 @@ CreateThread(function()
     end
 
     -- ====================================================================
-    -- =-------------------- [DLC: Cayo Perico Heist] --------------------=
-    -- ====================================================================
-    if GetGameBuildNumber() >= 2189 then
-        CayoPericoNightclub.LoadDefault() -- 1550.0, 250.0, -50.0
-        CayoPericoSubmarine.LoadDefault() -- 1560.0, 400.0, -50.0
-    end
-
-    -- ====================================================================
     -- =------------------- [DLC: Los Santos Tuners] ---------------------=
     -- ====================================================================
     if GetGameBuildNumber() >= 2372 then
@@ -220,4 +212,6 @@ CreateThread(function()
         SummerCarrier.LoadDefault() -- -3208.03, 3954.54, 14.0
         SummerOffice.LoadDefault() -- 565.886, -2688.761, -50.0
     end
+
+    MercenariesFixes.Enable(false)
 end)
