@@ -1,10 +1,10 @@
 RegisterNUICallback("exitMenu", function() 
-    TriggerEvent("origen-banking:Client:BankMenu:Hide")
+    TriggerEvent("qb-banking:Client:BankMenu:Hide")
 end)
 
 RegisterNUICallback("deposit", function(modalData, cb) 
     TwoNa.TriggerServerCallback(
-        "origen-banking:Server:DepositMoney", 
+        "qb-banking:Server:DepositMoney", 
         { accountId = modalData.account.id, amount = modalData.action.amount, description = modalData.action.description  },
         function(data) 
             if data then
@@ -21,7 +21,7 @@ end)
 
 RegisterNUICallback("transfer", function(modalData, cb) 
     TwoNa.TriggerServerCallback(
-        "origen-banking:Server:TransferMoney", 
+        "qb-banking:Server:TransferMoney", 
         { accountId = modalData.account.id, amount = modalData.action.amount, description = modalData.action.description, targetId = modalData.action.targetId  },
         function(data) 
             if data then 
@@ -38,7 +38,7 @@ end)
 
 RegisterNUICallback("withdraw", function(modalData, cb) 
     TwoNa.TriggerServerCallback(
-        "origen-banking:Server:WithdrawMoney", 
+        "qb-banking:Server:WithdrawMoney", 
         { accountId = modalData.account.id, amount = modalData.action.amount, description = modalData.action.description  },
         function(data) 
             if data then 
@@ -55,7 +55,7 @@ end)
 
 RegisterNUICallback("create-account", function(modalData, cb) 
     TwoNa.TriggerServerCallback(
-        "origen-banking:Server:CreateAccount", 
+        "qb-banking:Server:CreateAccount", 
         {  accountName = modalData.action.name },
         function(data) 
             if data then 
@@ -72,7 +72,7 @@ end)
 
 RegisterNUICallback("delete-account", function(modalData, cb) 
     TwoNa.TriggerServerCallback(
-        "origen-banking:Server:DeleteAccount", 
+        "qb-banking:Server:DeleteAccount", 
         {  accountId = modalData.account.id },
         function(success) 
             if success then 

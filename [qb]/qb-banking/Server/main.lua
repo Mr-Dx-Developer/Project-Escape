@@ -1,6 +1,6 @@
 TwoNa = exports["2na_core"]:getSharedObject()
 
-TwoNa.RegisterServerCallback("origen-banking:Server:GetUserAccounts", function(source, data, cb) 
+TwoNa.RegisterServerCallback("qb-banking:Server:GetUserAccounts", function(source, data, cb) 
     local identifier = TwoNa.GetCharacterIdentifier(source)
     local xPlayer = TwoNa.GetPlayer(source)
 
@@ -21,7 +21,7 @@ TwoNa.RegisterServerCallback("origen-banking:Server:GetUserAccounts", function(s
     cb({playerName = xPlayer.name, accounts = accounts})
 end)
 
-TwoNa.RegisterServerCallback("origen-banking:Server:CreateAccount", function(source, data, cb) 
+TwoNa.RegisterServerCallback("qb-banking:Server:CreateAccount", function(source, data, cb) 
     local identifier = TwoNa.GetCharacterIdentifier(source)
 
     if not data.accountName then 
@@ -47,7 +47,7 @@ TwoNa.RegisterServerCallback("origen-banking:Server:CreateAccount", function(sou
     cb(account)
 end)
 
-TwoNa.RegisterServerCallback("origen-banking:Server:DeleteAccount", function(source, data, cb) 
+TwoNa.RegisterServerCallback("qb-banking:Server:DeleteAccount", function(source, data, cb) 
     local identifier = TwoNa.GetCharacterIdentifier(source)
 
     if string.find(data.accountId, "si:") then 
@@ -64,7 +64,7 @@ TwoNa.RegisterServerCallback("origen-banking:Server:DeleteAccount", function(sou
     end   
 end)
 
-TwoNa.RegisterServerCallback("origen-banking:Server:DepositMoney", function(source, data, cb) 
+TwoNa.RegisterServerCallback("qb-banking:Server:DepositMoney", function(source, data, cb) 
     local identifier = TwoNa.GetCharacterIdentifier(source)
     local xPlayer = TwoNa.GetPlayer(source)
 
@@ -108,7 +108,7 @@ TwoNa.RegisterServerCallback("origen-banking:Server:DepositMoney", function(sour
     end
 end)
 
-TwoNa.RegisterServerCallback("origen-banking:Server:WithdrawMoney", function(source, data, cb) 
+TwoNa.RegisterServerCallback("qb-banking:Server:WithdrawMoney", function(source, data, cb) 
     local identifier = TwoNa.GetCharacterIdentifier(source)
     local xPlayer = TwoNa.GetPlayer(source)
 
@@ -155,7 +155,7 @@ TwoNa.RegisterServerCallback("origen-banking:Server:WithdrawMoney", function(sou
     end
 end)
 
-TwoNa.RegisterServerCallback("origen-banking:Server:TransferMoney", function(source, data, cb) 
+TwoNa.RegisterServerCallback("qb-banking:Server:TransferMoney", function(source, data, cb) 
     local identifier = TwoNa.GetCharacterIdentifier(source)
 
     if string.find(data.accountId, "si:") then 

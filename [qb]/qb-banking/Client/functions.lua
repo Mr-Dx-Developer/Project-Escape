@@ -13,7 +13,7 @@ function RegisterBankTargets()
                     icon = 'fas fa-money-bill-wave',
                     label = "Access bank acount",
                     onSelect = function()
-                        TriggerEvent("origen-banking:Client:BankMenu:Show")
+                        TriggerEvent("qb-banking:Client:BankMenu:Show")
                     end,
                     distance = 2.0
                 }}
@@ -30,7 +30,7 @@ function RegisterBankTargets()
                         icon = 'fas fa-money-bill-wave',
                         label = 'Access bank account',
                         action = function()
-                            TriggerEvent("origen-banking:Client:BankMenu:Show")
+                            TriggerEvent("qb-banking:Client:BankMenu:Show")
                         end
                     }},
                     distance = 2.0
@@ -47,7 +47,7 @@ function RegisterBankTargets()
                     icon = 'fas fa-money-bill-wave',
                     label = 'Access bank account',
                     action = function()
-                        TriggerEvent("origen-banking:Client:BankMenu:Show")
+                        TriggerEvent("qb-banking:Client:BankMenu:Show")
                     end
                 }},
                 distance = 2.0
@@ -63,7 +63,7 @@ function RegisterATMTargets()
                 label = 'Use ATM',
                 distance = 1.0,
                 onSelect = function() 
-                    TriggerEvent("origen-banking:Client:BankMenu:Show")
+                    TriggerEvent("qb-banking:Client:BankMenu:Show")
                 end
         }})
     elseif Config.TargetScript == "qb-target" then
@@ -72,7 +72,7 @@ function RegisterATMTargets()
                 icon = 'fas fa-credit-card',
                 label = 'Use ATM',
                 action = function() 
-                    TriggerEvent("origen-banking:Client:BankMenu:Show")
+                    TriggerEvent("qb-banking:Client:BankMenu:Show")
                 end
             }},
             distance = 1.0
@@ -83,7 +83,7 @@ function RegisterATMTargets()
                 icon = 'fas fa-credit-card',
                 label = 'Use ATM',
                 action = function() 
-                    TriggerEvent("origen-banking:Client:BankMenu:Show")
+                    TriggerEvent("qb-banking:Client:BankMenu:Show")
                 end
             }},
             distance = 1.0
