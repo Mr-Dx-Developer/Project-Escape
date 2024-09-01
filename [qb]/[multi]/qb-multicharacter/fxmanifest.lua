@@ -1,16 +1,9 @@
--- $$\   $$\  $$$$$$\  $$\   $$\ $$\   $$\ $$$$$$$\  
--- $$$\  $$ |$$  __$$\ $$ |  $$ |$$ |  $$ |$$  __$$\ 
--- $$$$\ $$ |$$ /  \__|$$ |  $$ |$$ |  $$ |$$ |  $$ |
--- $$ $$\$$ |$$ |      $$$$$$$$ |$$ |  $$ |$$$$$$$\ |
--- $$ \$$$$ |$$ |      $$  __$$ |$$ |  $$ |$$  __$$\ 
--- $$ |\$$$ |$$ |  $$\ $$ |  $$ |$$ |  $$ |$$ |  $$ |
--- $$ | \$$ |\$$$$$$  |$$ |  $$ |\$$$$$$  |$$$$$$$  |
--- \__|  \__| \______/ \__|  \__| \______/ \_______/  
--- discord.gg/sgx & Patreon.com/NCHub
 fx_version 'cerulean'
 game 'gta5'
-
-description 'qb-multicharacter'
+lua54 'yes'
+author 'pappu'
+description 'qb-multicharacter Allows players to create characters'
+version '1.0.4'
 
 shared_scripts {
     '@qb-core/shared/locale.lua',
@@ -18,7 +11,12 @@ shared_scripts {
     'locales/*.lua',
     'config.lua'
 }
-client_script 'client/main.lua'
+
+client_scripts {
+    'client/main.lua'
+}
+
+
 server_scripts  {
     '@oxmysql/lib/MySQL.lua',
     '@qb-apartments/config.lua',
@@ -36,5 +34,6 @@ files {
 }
 
 dependencies {
-    'qb-core'
+    'qb-core',
+    'qb-spawn'
 }
