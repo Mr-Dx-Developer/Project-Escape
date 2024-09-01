@@ -19,6 +19,38 @@ return {
 		---- 0.9 means 1%
 
 		-- NEW F9s (APRIL)
+--THROWABLES
+['WEAPON_M67']              = {label = 'M67',          weight = 149,    throwable = true,},
+-- MELEE
+['WEAPON_DILDO']            = {label = 'Dildo',        weight = 500,    durability = 0.1,},
+['WEAPON_SLEDGEHAMMER']     = {label = 'Sledgehammer', weight = 500,    durability = 0.1,},
+['WEAPON_KATANA']           = {label = 'Katana',       weight = 500,    durability = 0.1,},
+['WEAPON_KEYBOARD']         = {label = 'keyboard',     weight = 500,    durability = 0.1,},
+['WEAPON_RIFTEDGE']         = {label = 'Riftedge',     weight = 500,    durability = 0.1,},
+['WEAPON_KRAMBIT']          = {label = 'Krambit',      weight = 500,    durability = 0.1,},
+['WEAPON_SWORD']            = {label = 'Sword',        weight = 500,    durability = 0.1,},
+-- WEAPONS
+['WEAPON_BEANBAG'] 			= { label = 'Bean Bag',    weight = 1000,	durability = 0.0,	ammoname = 'ammo-shotgun',},
+['WEAPON_BROWNING'] 	    = { label = 'Browing',	   weight = 1000,	durability = 0.0,	ammoname = 'pistol_ammo',},
+['WEAPON_GLOCK22'] 	        = { label = 'GLOCK-22',	   weight = 1000,	durability = 0.0,	ammoname = 'pistol_ammo',},
+['WEAPON_DP9'] 	            = { label = 'DP9',	       weight = 1000,	durability = 0.0,	ammoname = 'pistol_ammo',},
+['WEAPON_M4A1'] 	        = { label = 'M4A1',	       weight = 1000,	durability = 0.0,	ammoname = 'pistol_ammo',},
+['WEAPON_M45A1'] 	        = { label = 'M45A1',	   weight = 1000,	durability = 0.0,	ammoname = 'pistol_ammo',},
+['WEAPON_P226'] 	        = { label = 'P226',	       weight = 1000,	durability = 0.0,	ammoname = 'pistol_ammo',},
+['WEAPON_UZI'] 			    = { label = 'UZI', 		   weight = 1000,	durability = 0.0,	ammoname = 'smg_ammo',},
+['WEAPON_TEC9'] 			= { label = 'TEC-9', 	   weight = 1000,	durability = 0.0,	ammoname = 'smg_ammo',},
+['WEAPON_MAC10'] 			= { label = 'MAC-10', 	   weight = 1000,	durability = 0.0,	ammoname = 'smg_ammo',},
+['WEAPON_MP9'] 			    = { label = 'MP9', 		   weight = 1000,	durability = 0.0,	ammoname = 'smg_ammo',},
+['WEAPON_G18C'] 		    = { label = 'G18-C', 	   weight = 1000,	durability = 0.0,	ammoname = 'smg_ammo',},
+['WEAPON_MP5'] 				= { label = 'MP5', 	       weight = 1000,	durability = 0.0,	ammoname = 'rifle_ammo',},
+['WEAPON_GROZA'] 		    = { label = 'GROZA', 	   weight = 1000,	durability = 0.0,	ammoname = 'rifle_ammo',},
+['WEAPON_HK416B'] 		    = { label = 'HK416B',      weight = 1000,	durability = 0.0,	ammoname = 'rifle_ammo',},
+['WEAPON_VECTOR'] 		    = { label = 'VECTOR',      weight = 1000,	durability = 0.0,	ammoname = 'smg_ammo',},
+['WEAPON_M4'] 		        = { label = 'M4',          weight = 1000,	durability = 0.0,	ammoname = 'rifle_ammo',},
+['WEAPON_GEPARD'] 		    = { label = 'GEPARD',      weight = 1000,	durability = 0.0,	ammoname = 'rifle_ammo',},
+['WEAPON_DRACO'] 		    = { label = 'DRACO',       weight = 1000,	durability = 0.0,	ammoname = 'rifle_ammo',},          
+
+
 
 		['WEAPON_L85_CHRISTMAS'] = {
 			label = 'L85 CHRISTMAS',
@@ -48,12 +80,7 @@ return {
 			ammoname = 'pistol_ammo',
 		},
 
-		['WEAPON_VECTOR'] = {
-			label = 'VECTOR',
-			weight = 2500,
-			durability = 0.175,
-			ammoname = 'smg_ammo',
-		},
+		
 
 		-- NEW F9s (JUNE)
 		['WEAPON_M4_TACTICAL_RED'] = {
@@ -121,12 +148,7 @@ return {
 			ammoname = 'pistol_ammo',
 		},
 
-		['WEAPON_M4'] = {
-			label = 'PD M4A1',
-			weight = 5000,
-			durability = 0.09,
-			ammoname = 'rifle_ammo',
-		},
+		
 
 		['WEAPON_M9'] = {
 			label = 'Beretta M9A3',
@@ -149,13 +171,7 @@ return {
 			ammoname = 'pistol_ammo',
 		},
 
-		['WEAPON_UZI'] = {
-			label = 'UZI',
-			weight = 2500,
-			durability = 0.175,
-			ammoname = 'smg_ammo',
-		},
-
+		
 		['WEAPON_SMG'] = {
 			label = 'PD SMG',
 			weight = 2500,
@@ -163,12 +179,7 @@ return {
 			ammoname = 'smg_ammo',
 		},
 
-		['WEAPON_MAC10'] = {
-			label = 'MAC-10',
-			weight = 2500,
-			durability = 0.175,
-			ammoname = 'smg_ammo',
-		},
+		
 
 		['WEAPON_MOSSBERG'] = { -- 8 clips
 			label = 'Mossberg 500',
@@ -218,11 +229,7 @@ return {
 			ammoname = 'hunting_ammo',
 		},
 
-		['WEAPON_KATANA'] = {
-			label = 'Katana',
-			weight = 250,
-			durability = 0.01,
-		},
+		
 
 		['WEAPON_THERMAL_KATANA'] = {
 			label = 'Thermal Katana',
@@ -230,18 +237,9 @@ return {
 			durability = 0.01,
 		},
 
-		['WEAPON_SLEDGEHAMMER'] = {
-			label = 'Sledge Hammer',
-			weight = 250,
-			durability = 0.01,
-		},
+		
 
-		['WEAPON_MP9'] = {
-			label = 'MP9',
-			weight = 2500,
-			durability = 0.175,
-			ammoname = 'smg_ammo',
-		},
+		
 
 		['WEAPON_M110'] = {
 			label = 'PD M110',
@@ -271,19 +269,7 @@ return {
 			ammoname = 'pistol_ammo',
 		},
 
-		['WEAPON_GLOCK22'] = {
-			label = 'Glock 22',
-			weight = 1000,
-			durability = 0.3,
-			ammoname = 'pistol_ammo',
-		},
-
-		['WEAPON_MP5'] = {
-			label = 'H&K MP5',
-			weight = 2500,
-			durability = 0.175,
-			ammoname = 'smg_ammo',
-		},
+		
 
 		['WEAPON_KARAMBIT'] = {
 			label = 'Karambit',
@@ -627,12 +613,7 @@ return {
 			ammoname = 'sniper_ammo',
 		},
 
-		['WEAPON_GROZA'] = {
-			label = 'GROZA',
-			weight = 5000,
-			durability = 0.09,
-			ammoname = 'rifle_ammo',
-		},
+		
 
 		['WEAPON_DITDG'] = {
 			label = 'DITDG',
