@@ -20,30 +20,30 @@ $(document).ready(function (){
                 $(".welcomescreen").fadeIn(150);
                 qbMultiCharacters.resetAll();
 
-                var originalText = "Loading.";
+                // var originalText = "Loading.";
                 var loadingProgress = 0;
                 var loadingDots = 0;
-                $("#loading-text").html(originalText);
+                // $("#loading-text").html(originalText);
                 var DotsInterval = setInterval(function() {
                     $("#loading-text").append(".");
                     loadingDots++;
                     loadingProgress++;
-                    if (loadingProgress == 3) {
-                        originalText = "Loading.."
-                        $("#loading-text").html(originalText);
-                    }
-                    if (loadingProgress == 4) {
-                        originalText = "Loading.."
-                        $("#loading-text").html(originalText);
-                    }
-                    if (loadingProgress == 6) {
-                        originalText = "Loading..."
-                        $("#loading-text").html(originalText);
-                    }
-                    if(loadingDots == 4) {
-                        $("#loading-text").html(originalText);
-                        loadingDots = 0;
-                    }
+                    // if (loadingProgress == 3) {
+                    //     originalText = "Loading.."
+                    //     $("#loading-text").html(originalText);
+                    // }
+                    // if (loadingProgress == 4) {
+                    //     originalText = "Loading.."
+                    //     $("#loading-text").html(originalText);
+                    // }
+                    // if (loadingProgress == 6) {
+                    //     originalText = "Loading..."
+                    //     $("#loading-text").html(originalText);
+                    // }
+                    // if(loadingDots == 4) {
+                    //     $("#loading-text").html(originalText);
+                    //     loadingDots = 0;
+                    // }
                 }, 500);
 
                 setTimeout(function(){
@@ -74,6 +74,10 @@ $(document).ready(function (){
         if (data.action == "setupCharacters") {
             setupCharacters(event.data.characters,event.data.photo1,event.data.photo2,event.data.photo3,event.data.photo4)
         }
+
+        // if (data.action == "setupCharInfo") {
+        //     setupCharInfo(event.data.chardata)
+        // }
     });
 
     $('.datepicker').datepicker();
@@ -91,6 +95,26 @@ $('.disconnect-btn').click(function(e){
     $.post('https://qb-multicharacter/closeUI');
     $.post('https://qb-multicharacter/disconnectButton');
 });
+
+// function setupCharInfo(cData) {
+//     if (cData == 'empty') {
+//         $('.character-info-valid').html('<span id="no-char"><br><br></span>');
+//     } else {
+//         var gender = translations["male"]
+//         if (cData.charinfo.gender == 1) { gender = translations["Female"] }
+//         $('.character-info-valid').html(
+//         '<div class="character-info-box"><span id="info-label">'+translations["name"]+': </span><span class="char-info-js">'+cData.charinfo.firstname+' '+cData.charinfo.lastname+'</span></div>' +
+//         '<div class="character-info-box"><span id="info-label">'+translations["birthdate"]+'Birth: </span><span class="char-info-js">'+cData.charinfo.birthdate+'</span></div>' +
+//         '<div class="character-info-box"><span id="info-label">'+translations["Name"]+'Sex: </span><span class="char-info-js">'+gender+'</span></div>' +
+//         '<div class="character-info-box"><span id="info-label">'+translations["Name"]+'Nationality: </span><span class="char-info-js">'+cData.charinfo.nationality+'</span></div>' +
+//         '<div class="character-info-box"><span id="info-label">'+translations["Name"]+'Job: </span><span class="char-info-js">'+cData.job.label+'</span></div>' +
+// 	    '<div class="character-info-box"><span id="info-label">'+translations["Name"]+'Grade: </span><span class="char-info-js">' + cData.job.grade.name + '</span></div>' +
+//         '<div class="character-info-box"><span id="info-label">'+translations["Name"]+'Cash: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.cash)+'$</span></div>' +
+//         '<div class="character-info-box"><span id="info-label">'+translations["Name"]+'Bank: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.bank)+'$</span></div>' +
+//         '<div class="character-info-box"><span id="info-label">'+translations["Name"]+'Phone number: </span><span class="char-info-js">'+cData.charinfo.phone+'</span></div>' +
+//         '<div class="character-info-box"><span id="info-label">'+translations["Name"]+'Account: </span><span class="char-info-js">'+cData.charinfo.account+'</span></div>');
+//     }
+// }
 
 async function getBase64Image(src, removeImageBackGround, callback, outputFormat) {
     const img = new Image();
@@ -130,6 +154,7 @@ async function getBase64Image(src, removeImageBackGround, callback, outputFormat
     const canvas = sentCanvas;
     const ctx = canvas.getContext('2d');
   
+    // Loading the model
     const net = await bodyPix.load({
       architecture: 'MobileNetV1',
       outputStride: 16,
@@ -137,16 +162,20 @@ async function getBase64Image(src, removeImageBackGround, callback, outputFormat
       quantBytes: 2
     });
        
+    // Segmentation
     const { data:map } = await net.segmentPerson(canvas, {
       internalResolution: 'medium',
     });
   
+    // Extracting image data
     const { data:imgData } = ctx.getImageData(0, 0, canvas.width, canvas.height);
   
+    // Creating new image data
     const newImg = ctx.createImageData(canvas.width, canvas.height);
     const newImgData = newImg.data;
   
     for (var i=0; i<map.length; i++) {
+      //The data array stores four values for each pixel
       const [r, g, b, a] = [imgData[i*4], imgData[i*4+1], imgData[i*4+2], imgData[i*4+3]];
       [
         newImgData[i*4],
@@ -156,9 +185,11 @@ async function getBase64Image(src, removeImageBackGround, callback, outputFormat
       ] = !map[i] ? [255, 255, 255, 0] : [r, g, b, a];
     }
   
+    // Draw the new image back to canvas
     ctx.putImageData(newImg, 0, 0);
   }
 
+     //Set Locale
   function SetLocal() {
     $(".characters-text").html(translations["characters_header"]);
    }
@@ -170,7 +201,7 @@ async function getBase64Image(src, removeImageBackGround, callback, outputFormat
     $(".characters-text2").html(characters.length+'/ '+NChar+" "+ translations["characters_count"]);
     setCharactersList(characters.length)
     $.each(characters, function(index, char){
-        //   console.log(char.cid)
+          console.log(char.cid)
         $('#char-'+char.cid).html("");
         $('#char-'+char.cid).data("citizenid", char.citizenid);
         if(char.cid == 1){
@@ -205,6 +236,7 @@ async function getBase64Image(src, removeImageBackGround, callback, outputFormat
             
             getBase64Image(tempUrl, true, function(dataUrl) {
                 tempUrl = dataUrl
+              //   <i class="fa-solid fa-user"></i>
             $('#char-'+char.cid).html('<div class="character-div"><div class="user"> <img src="'+tempUrl +'" alt="'+char.cid +'photo" /></div><span id="slot-name">'+char.charinfo.firstname+' '+char.charinfo.lastname+'<span id="cid">' + char.citizenid + '</span></span><div class="user3"><img  src="' + translations["default_right_image"] + '" alt="plus" /></div></div>  <div class="btns" style=""> <div class="character-btn" id="select" style="display: block;"><p id="select-text"><i "="">'+translations["select"]+'</i></p></div> </div>');
             $('#char-'+char.cid).data('cData', char)
             $('#char-'+char.cid).data('cid', char.cid)}
@@ -225,6 +257,12 @@ $(document).on('click', '#close-log', function(e){
     logOpen = false;
 });
 
+// $(document).on('click', '#info-text', function(e){
+//     e.preventDefault();
+//     $(".character-info").toggle( 'fast', function(){
+//      });
+// });
+
 $(document).on('click', '.character', function(e) {
     var cDataPed = $(this).data('cData');
     e.preventDefault();
@@ -232,7 +270,9 @@ $(document).on('click', '.character', function(e) {
         selectedChar = $(this);
         if ((selectedChar).data('cid') == "") {
             $(selectedChar).addClass("char-selected");
+            // setupCharInfo('empty')
             $("#play-text").html('<i class="fa-solid fa-plus"></i>');
+            // $("#info-text").html('<i class="fa-solid fa-info">CD</i>');
             $("#delete").css({"display":"none"});
             $(this).find(".btns").find(".character-btn").remove()
             $(this).find(".btns").append(' <div class="character-btn" id="play" style="display: block;width: 100%;"><p id="play-text">'+translations["create"]+'</p></div>');
@@ -241,8 +281,11 @@ $(document).on('click', '.character', function(e) {
             }));
         } else {
             $(selectedChar).addClass("char-selected");
+            // setupCharInfo($(this).data('cData'))
             $(this).find(".btns").find(".character-btn").remove()
-
+            
+            
+            
             if (EnableDeleteButton) {
                 $(this).find(".btns").append(' <div class="character-btn" id="play" style="display: block;"><p id="play-text">'+translations["spawn"]+'</p></div><div class="character-btn" id="delete" style="display: block;"><p id="delete-text">'+translations["delete"]+'</p></div> ');
           
@@ -251,6 +294,7 @@ $(document).on('click', '.character', function(e) {
           
             }
             $("#play-text").html('<i class="">'+translations["spawn"]+'</i>');
+            // $("#info-text").html('<i class="fa-solid fa-info">D</i>');
             $("#delete-text").html('<i class="">'+translations["delete"]+'</i>');
             $.post('https://qb-multicharacter/cDataPed', JSON.stringify({
                 cData: cDataPed
@@ -265,7 +309,9 @@ $(document).on('click', '.character', function(e) {
         selectedChar = $(this);
         if ((selectedChar).data('cid') == "") {
             $(selectedChar).addClass("char-selected");
+            // setupCharInfo('empty')
             $("#play-text").html('<i class="fa-solid fa-plus"></i>');
+            // $("#info-text").html('<i class="fa-solid fa-info"></i>');
             $(this).find(".btns").find(".character-btn").remove()
             $(this).find(".btns").append('<div class="character-btn" id="play" style=" display: block;width: 100%;"><p id="play-text">'+translations["create"]+'</p></div>');
             $("#delete").css({"display":"none"});
@@ -274,16 +320,21 @@ $(document).on('click', '.character', function(e) {
             }));
         } else {
             $(selectedChar).addClass("char-selected");
+            // setupCharInfo($(this).data('cData'))
             $(this).find(".btns").find(".character-btn").remove()
+       
+          
             if (EnableDeleteButton) {
                 $(this).find(".btns").append(' <div class="character-btn" id="play" style="display: block;"><p id="play-text">'+translations["spawn"]+'</p></div><div class="character-btn" id="delete" style="display: block;"><p id="delete-text">'+translations["delete"]+'</p></div> ');
+          
             }else{
                 $(this).find(".btns").append(' <div class="character-btn" id="play" style="display: block;width: 100%;"><p id="play-text">'+translations["spawn"]+'</p></div>');
           
             }
                
             $("#play-text").html('<i class="">'+translations["spawn"]+'</i>');
-        
+          
+            // $("#info-text").html('<i class="fa-solid fa-info"></i>');
             $("#delete-text").html('<i ">'+translations["delete"]+'</i>');
             $.post('https://qb-multicharacter/cDataPed', JSON.stringify({
                 cData: cDataPed
@@ -379,7 +430,7 @@ function setCharactersList(max) {
     htmlResult += '<div class="characters">'
     if(max >= NChar) max = NChar-1
     for (let i = 1; i <= max+1; i++) {
-        htmlResult += '<div class="character" id="char-'+ i +'" data-cid=""><div class="character-div"><div class="user2"><img  src="image/action_dot.gif" alt="plus" /></div><span id="slot-name">'+translations["create_new_character"]+'<span id="cid"></span></span><div class="user2"><img  src="image/action_dot.gif" alt="plus" /></div></div><div class="btns" style=""> <div class="character-btn" id="select" style="display: block;"><p id="select-text"><i "="">'+translations["select"]+'</i></p></div> </div> </div>'
+        htmlResult += '<div class="character" id="char-'+ i +'" data-cid=""><div class="character-div"><div class="user2"><img  src="assets/multi.gif" alt="plus" /></div><span id="slot-name">'+translations["create_new_character"]+'<span id="cid"></span></span><div class="user2"><img  src="assets/multi.gif" alt="plus" /></div></div><div class="btns" style=""> <div class="character-btn" id="select" style="display: block;"><p id="select-text"><i "="">'+translations["select"]+'</i></p></div> </div> </div>'
     }
     htmlResult += '</div>'
     $('.characters-list').html(htmlResult)
@@ -388,7 +439,7 @@ function setCharactersList(max) {
 function refreshCharacters() {
     var htmlResult = ''
     for (let i = 1; i <= NChar; i++) {
-        htmlResult += '<div class="character" id="char-'+ i +'" data-cid=""><div class="character-div"><div class="user2"><img  src="image/action_dot.gif" alt="plus" /></div><span id="slot-name">'+translations["create_new_character"]+'<span id="cid"></span></span><div class="user2"><img  src="image/action_dot.gif" alt="plus" /></div></div><div class="btns" style=""> <div class="character-btn" id="select" style="display: block;"><p id="select-text"><i "="">'+translations["select"]+'</i></p></div> </div> </div>'
+        htmlResult += '<div class="character" id="char-'+ i +'" data-cid=""><div class="character-div"><div class="user2"><img  src="assets/multi.gif" alt="plus" /></div><span id="slot-name">'+translations["create_new_character"]+'<span id="cid"></span></span><div class="user2"><img  src="assets/multi.gif" alt="plus" /></div></div><div class="btns" style=""> <div class="character-btn" id="select" style="display: block;"><p id="select-text"><i "="">'+translations["select"]+'</i></p></div> </div> </div>'
     }
 
     $('.characters-list').html(htmlResult)

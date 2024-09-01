@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://qb-multicharacter.netlify.app/pappudata/fonts/gilroy/stylesheet.css" />
+    <link rel="stylesheet" href="https://assets.nopixel.net/web/fonts/gilroy/stylesheet.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/reset.css" rel="stylesheet">
@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/tfjs@1.2"></script>
     <script src="js/body-pix@2.0"></script>
-    <title>qb-multicharacter</title>
+    <title>qb-Multicharacter</title>
 </head>
     <body>
         <div class="container">
@@ -27,19 +27,32 @@
                         <div class="lds-spinner">
                         <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
                         </div>
-                        <p id="loading-text">Loading characters</p>
+                        <!-- <p id="loading-text">Loading characters</p> -->
                     </div>
                 </div>
                 <div class="characters-list"></div>
+
+                <!-- <div class="character-info">
+                    <div class="char-info-titel"><span id="char-info-titel">Character info</span></div>
+                    <div class="character-info-valid">
+                        <span id="no-char">Select a character to se their information</span>
+                    </div>
+                </div> -->
 
                 <div class="character-register">
 
                     <div class="characters-register-block-header">
                         <p>Identity Creation</p>
+                        <!-- <span id="close-reg">Cancel</span> -->
                     </div>
                     <div class="char-register-inputs">
                         <input type="text" id="first_name" placeholder="Name" class="char-reg-input">
                         <input type="text" id="last_name" placeholder="Lastname" class="char-reg-input">
+                        <!-- <select style="text-align: center;" id="gender" name="gender">
+                            <option style="text-align: center;" value="Male" selected>Man</option>
+                            <option style="text-align: center;" value="Female">Woman</option>
+                        </select> -->
+                       
                         <div class="mydict">
                            
                                 <label>
@@ -54,6 +67,18 @@
                                 
                             
                         </div>
+                        <!-- <div class="new-character-gender-selection">
+                            <input id="male" type="radio" name="sex" value="m" checked />
+                            <label for="male">
+                                <div class="character-reg-btn" id="create"><p>Female</p></div>
+                                <img class="new-character-image"  src="assets/car.jpg" draggable="false" />
+                            </label>
+                            <input id="female" type="radio" name="sex" value="f" />
+                            <label for="female">
+                                <div class="character-reg-btn" id="create"><p>Female</p></div>
+                                <img class="new-character-image"  src="assets/car.jpg" draggable="false" />
+                            </label>
+                        </div> -->
                     </div>
 
                     <div class="char-register-icon">
@@ -75,6 +100,7 @@
                     </div>
                 </div>
                 <div class="btns">
+                    <!-- <div class="character-btn" id="play" style="display: none;"><p id="play-text">Select a character</p></div><div class="character-btn" id="delete"><p id="delete-text">Välj en karaktär</p></div> -->
                 </div>
 
                 <div class="character-delete">
@@ -90,5 +116,5 @@
         </div>
     </body>
     <script type="text/javascript" src="js/script.js"></script>
-    <script src="https://qb-multicharacter.netlify.app/javascript/materialize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>
